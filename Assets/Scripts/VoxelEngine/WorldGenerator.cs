@@ -100,13 +100,13 @@ public class WorldGenerator : MonoBehaviour
                     {
                         float detailXY = Mathf.PerlinNoise(worldX * detailNoiseScale, y * detailNoiseScale);
                         float detailYZ = Mathf.PerlinNoise(y * detailNoiseScale, worldZ * detailNoiseScale);
-                        float detailNoise = (detailXY + detailYZ) * 0.5f;
+                        float detailNoise = (detailXY + detailYZ);
 
-                        if (detailNoise > 0.65f)
+                        if (detailNoise > 0.85f)
                         {
                             data.map[x, y, z] = BlockType.Dirt;
                         }
-                        else if (detailNoise > 0.45f)
+                        else if (detailNoise > 0.55f)
                         {
                             data.map[x, y, z] = BlockType.StoneyDirt;
                         }
