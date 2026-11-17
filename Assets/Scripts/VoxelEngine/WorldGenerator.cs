@@ -186,7 +186,7 @@ public class WorldGenerator : MonoBehaviour
 
         // Place the VR player right outside the 5x5x5 cave opening (local Z offset of -4 units from the center)
         // transform.TransformPoint automatically scales this down properly if your parent container is scaled!
-        Vector3 localOffset = new Vector3(0f, 0f, -4f);
+        Vector3 localOffset = new Vector3(0f, 0f, -10f);
         Vector3 spawnGlobal = transform.TransformPoint(centerLocal + localOffset);
 
         vrPlayerRig.position = spawnGlobal;
